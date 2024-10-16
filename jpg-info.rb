@@ -17,7 +17,7 @@ require 'net/http'
 require 'uri'
 require 'json'
 
-api_key = "AIzaSyDOMzVtP0mYOP7-PUvXRB5sAsb2REu3FoU"
+api_key = ENV[GOOGLE_MAPS_API_KEY]
 
 # Construct the API URL (example using Google Maps)
 url = URI("https://maps.googleapis.com/maps/api/geocode/json?latlng=#{latitude},#{longitude}&key=#{api_key}")
