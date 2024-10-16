@@ -1,3 +1,4 @@
+require 'dotenv/load'
 require 'exifr/jpeg'
 require 'geocoder'
 
@@ -17,7 +18,8 @@ require 'net/http'
 require 'uri'
 require 'json'
 
-api_key = ENV[GOOGLE_MAPS_API_KEY]
+api_key = ENV['GOOGLE_MAPS_API_KEY']
+puts api_key
 
 # Construct the API URL (example using Google Maps)
 url = URI("https://maps.googleapis.com/maps/api/geocode/json?latlng=#{latitude},#{longitude}&key=#{api_key}")
